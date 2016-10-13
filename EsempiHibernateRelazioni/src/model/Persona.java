@@ -33,8 +33,9 @@ public class Persona {
 	
 	
 	
-	//@OneToMany(mappedBy="persona")//imposto tipo di relazione mappatoDa(evito di creare una terza tabella,ma aggiunge una colonna)
-	//@NotFound(action=NotFoundAction.IGNORE)
+	//@OneToMany(mappedBy="persona",cascade=CascadeType.ALL)//imposto tipo di relazione mappatoDa(evito di creare una terza tabella,ma aggiunge una colonna)
+	//@NotFound(action=NotFoundAction.IGNORE)-->se la tabella è vuota lancerebbe eccezione perchè non troverebbe id,
+	//in questo modo non lancia l'eccezione le nn lo trova e va avanti
 	//private Set <Computer> computer=new HashSet<Computer>();
 	
 	
